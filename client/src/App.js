@@ -7,13 +7,15 @@ class App extends Component {
     super();
     this.state = {
       searchInput: '',
-      view: 'FrontPage'
+      view: 'FrontPage',
+      userInfo: {}
     }
     this.onInputChange = this.onInputChange.bind(this);
+    this.setView = this.setView.bind(this);
   }
 
   setView(page) {
-    this.setState({})
+    this.setState({view:page});
   }
 
   onInputChange(e) {
@@ -27,13 +29,21 @@ class App extends Component {
     if(this.state.view === "FrontPage") {
       view = (
         <Frontpage
-          searchInput = {this.state.searchInput}
           onInputChange = {this.onInputChange}
+          setView = {this.setView}
         />)
     } else {
       view = (
         <Graph
-          userInfo = {this.state.userInfo}
+          searchInput = {this.state.searchInput}
+          setView = {this.setView}
+          userInfo = {
+            [
+              {username: 'hi', location: 'sf', hashtags: ['yo', 'there'], likes: 1},
+              {username: 'there', location: 'fremont', hashtags: ['grog', 'pull'], likes: 2}
+            ]
+            // this.state.userInfo
+          }
         />
       )
     }
