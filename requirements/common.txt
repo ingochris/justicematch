@@ -1,8 +1,0 @@
-Flask
-Flask-Script
-Nose
-Flask-Mongoengine
-
-Flask-WTF
-
-Flask-SocketIO
