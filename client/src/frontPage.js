@@ -15,6 +15,7 @@ class Frontpage extends Component {
           onChange={this.props.onInputChange}
           placeholder="e.g. MeToo">
         </input>
+        <button type="submit" onClick={()=>{this.props.setView("Graph")}}>{"->"}</button>
       </div>
     );
   }
