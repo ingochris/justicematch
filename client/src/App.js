@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './css/App.css';
 import Frontpage from './frontPage';
 import Graph from './graph';
+import Map from './map';
+import userInfo from './userinfo';
 class App extends Component {
   constructor() {
     super();
@@ -32,7 +34,7 @@ class App extends Component {
           onInputChange = {this.onInputChange}
           setView = {this.setView}
         />)
-    } else {
+    } else if (this.state.view === "Graph"){
       view = (
         <Graph
           searchInput = {this.state.searchInput}
@@ -45,6 +47,27 @@ class App extends Component {
             // this.state.userInfo
           }
         />
+      )
+    } else if(this.state.view === "Map") {
+      view = (
+        <div><Map
+          center={{
+            lat: 37.78,
+            lng: -122.39
+          }}
+        />
+        <Graph
+          searchInput = {this.state.searchInput}
+          setView = {this.setView}
+          userInfo = {
+            [
+              {username: 'hi', location: 'sf', hashtags: ['yo', 'there'], likes: 1},
+              {username: 'there', location: 'fremont', hashtags: ['grog', 'pull'], likes: 2}
+            ]
+            // this.state.userInfo
+          }
+        />
+      </div>
       )
     }
     return (
