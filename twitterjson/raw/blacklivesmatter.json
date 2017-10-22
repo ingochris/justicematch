@@ -2645,6 +2645,7 @@ var tweets = {
     ]
 }
 
+
 arr = tweets.statuses.map(status => {
     return {
         username: status.user.screen_name,
@@ -2657,4 +2658,4 @@ arr = tweets.statuses.map(status => {
     }
 })
 
-document.write(JSON.stringify(arr));
+document.write(arr);

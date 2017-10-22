@@ -2645,16 +2645,22 @@ var tweets = {
     ]
 }
 
+
 arr = tweets.statuses.map(status => {
     return {
         username: status.user.screen_name,
-        realname: status.user.name,
         location: status.user.location,
         hashtags: status.entities.hashtags,
-        likes: status.user.favourites_count,
-        followers: status.user.followers_count
-        //following: status.user.following
+        likes: status.user.favourites_count
     }
 })
 
-document.write(JSON.stringify(arr));
+document.write(arr);
+
+var arr = []
+
+for (var i = 0, j = tweets.statuses.length; i < j; i++) {
+
+arr.push(tweets.statuses[i].user.screen_name);
+
+}
