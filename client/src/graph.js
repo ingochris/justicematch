@@ -42,7 +42,7 @@ class Graph extends Component {
         </td>
         <td>{userInfo[i].username}</td>
         <td>{userInfo[i].location}</td>
-        <td>{userInfo[i].hashtags.join(', ')}</td>
+        <td>{userInfo[i].hashtags.map(hashtag => {return "#" + hashtag.text}).join(', ')}</td>
         <td>{userInfo[i].likes}</td></tr>);
       }
       return usercells;

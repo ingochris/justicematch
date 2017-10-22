@@ -59,7 +59,7 @@ export default class Map extends Component {
   render() {
     return (
       <div ref="map" id="mapView" style={{
-        top: '500px',
+        top: '130%',
         left: "30%",
         height: '500px',
         width: '500px',
