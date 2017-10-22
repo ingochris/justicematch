@@ -1,0 +1,15 @@
+.table {
+  margin: 10px 10%;
+  width: 80%;
+}
+
+.navButton {
+  float: right;
+  margin: 10px;
+}
+
+.nv {
+  height: 56px;
+  line-height: 57px;
+  background-color: beige;
+}

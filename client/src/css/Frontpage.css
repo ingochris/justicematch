@@ -1,0 +1,8 @@
+form {
+  width: 80%;
+  display: inline;
+}
+
+.form-group {
+  display: inline-block;
+}
