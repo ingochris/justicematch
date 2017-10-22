@@ -1,4 +1,4 @@
-{
+var tweets = {
     "search_metadata": {
         "completed_in": 0.07,
         "count": 15,
@@ -3588,3 +3588,17 @@
         }
     ]
 }
+
+arr = tweets.statuses.map(status => {
+    return {
+        username: status.user.screen_name,
+        realname: status.user.name,
+        location: status.user.location,
+        hashtags: status.entities.hashtags,
+        likes: status.user.favourites_count,
+        followers: status.user.followers_count
+        //following: status.user.following
+    }
+})
+
+document.write(JSON.stringify(arr));
