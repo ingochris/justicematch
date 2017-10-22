@@ -2,3 +2,8 @@
   text-align: center;
   font-size: 2em;
 }
+
+.jumbotron {
+  color: white;
+  background: rebeccapurple;
+}

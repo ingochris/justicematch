@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './css/Frontpage.css';
-import { Button, FormGroup, ControlLabel, FormControl } from 'react-bootstrap';
+import { Button, FormGroup, ControlLabel, FormControl, Jumbotron } from 'react-bootstrap';
 
 class Frontpage extends Component {
   constructor(props) {
@@ -14,6 +14,10 @@ class Frontpage extends Component {
   render() {
     return (
       <div>
+        <Jumbotron>
+           <h1>JusticeMatch</h1>
+           <p>The Social Justice Network</p>
+         </Jumbotron>
         #
         <form>
           <FormGroup
